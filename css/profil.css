@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#data_div{
+    width: 100%;
+    height: 60px;
+    background-color: #d28003;
+    display: flex;
+    flex-direction: row;
+}
+#data{
+    height: 60px;
+}
+#search_div{
+    margin-left: auto;
+}
+#search{
+    height: 30px;
+    width: 250px;
+    margin-top: 13px;
+    margin-right: 10px;
+    border: 0px;
+    border-radius: 0px;
+
+
+}
+#search:hover{
+    border: none;
+}
+i{
+
+    margin-right: 30px;
+    color: #FFFFFF;
+}
+#user{
+margin-top: 1px;
+    border: #000000;
+
+}

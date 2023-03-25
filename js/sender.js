@@ -27,6 +27,10 @@ $("#btn").on("click",function () {
                 alert("Նամակը հաջողությամբ ուղարկվեց")
                 location.reload();
                 window.location.href = 'http://localhost/mysite.loc/profil.php';
+            }else if (data === "emailerror"){
+                alert("Գրեք իրական էլ․հասցե")
+                location.reload();
+                window.location.href = 'http://localhost/mysite.loc/mail.php';
             }
         }
     });
