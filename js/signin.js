@@ -1,4 +1,5 @@
-$("#btn").on("click",function () {
+$("#btn").on("click",function (e) {
+  e.preventDefault();
   var email = $("#email").val().trim();
   var name = $("#name").val().trim();
   var password = $("#pass").val().trim();

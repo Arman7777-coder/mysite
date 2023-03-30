@@ -14,6 +14,7 @@ if (!isset($_SESSION['user'])){
     <link rel="stylesheet" href="css/profil.css">
     <link rel="stylesheet" href="bootstrap-4.0.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Profil</title>
 </head>
 <body id="body">
@@ -29,7 +30,11 @@ if (!isset($_SESSION['user'])){
 <input type="text" id="search" placeholder="Որոնում">
         <i class="fa fa-search" style="font-size: 20px"></i>
 
-<div id="user"></div>
+        <form action='vendor/userpage.php' method="post">
+            <div id="user">
+
+            </div>
+        </form>
     </div>
 
 </div>
@@ -37,6 +42,7 @@ if (!isset($_SESSION['user'])){
 <a href="vendor/logout.php">Դուրս գալ</a>
 <script src="jquery/jquery-3.6.3.min.js"></script>
 <script src="js/search.js"></script>
+
 <!--<script src="js/enablereturn.js"></script>-->
 </body>
 </html>
