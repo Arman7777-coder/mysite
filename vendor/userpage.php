@@ -21,7 +21,7 @@ $user = mysqli_fetch_assoc($result);
 }else{
     echo "no";
 }
-mysqli_close($connect);
+//mysqli_close($connect);
 
 
 

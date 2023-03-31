@@ -15,6 +15,7 @@ else {
     if (mysqli_num_rows($check_user) > 0) {
         $user = mysqli_fetch_assoc($check_user);
         $_SESSION['user'] = [
+            "id" => $user['id'],
             "email" => $user['email'],
             "name" => $user['name'],
 
