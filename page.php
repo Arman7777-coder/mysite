@@ -13,7 +13,16 @@ session_start();
 <body>
      <h1><?=$_SESSION['page_user']['name']?></h1>
      <h1><?=$_SESSION['page_user']['email']?></h1>
-     <a href="onlinechat.php">Գրել այս օգտատիրոջը</a>
+     <div id="chat">
+         <div id="messages"></div>
+         <form id="chat-form">
+             <div id="chat_messages"></div>
+             <input type="text" id="message" name="message" placeholder="Type your message...">
+             <button type="submit">Send</button>
+         </form>
+     </div>
      <a href="profil.php">Հետ գնալ</a>
+     <script src="jquery/jquery-3.6.3.min.js"></script>
+     <script src="js/chat.js"></script>
 </body>
 </html>
