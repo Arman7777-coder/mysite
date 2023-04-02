@@ -8,7 +8,7 @@ $(document).ready(function () {
             }
         });
     }
-    setInterval(getChatMessages, 1000);
+    setInterval(getChatMessages, 500);
 
 
 

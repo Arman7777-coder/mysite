@@ -9,6 +9,7 @@ session_start();
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Page</title>
+    <link rel="stylesheet" href="css/page.css">
 </head>
 <body>
      <h1><?=$_SESSION['page_user']['name']?></h1>
@@ -16,7 +17,7 @@ session_start();
      <div id="chat">
          <div id="messages"></div>
          <form id="chat-form">
-             <div id="chat_messages"></div>
+             <div id="chat_messages" style="display: flex;flex-direction: column;"></div>
              <input type="text" id="message" name="message" placeholder="Type your message...">
              <button type="submit">Send</button>
          </form>

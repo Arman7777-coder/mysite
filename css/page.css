@@ -1,0 +1,25 @@
+#chat_messages{
+    display: flex;
+    flex-direction: column;
+}
+.I{
+    height: 30px;
+    width: 100px;
+    background-color: #e0a800;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 200px;
+}
+.You{
+    height: 30px;
+    width: 100px;
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    color: #e0a800;
+    text-align: center;
+    margin-top: 20px;
+}
