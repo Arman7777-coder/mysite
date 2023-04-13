@@ -13,13 +13,27 @@ if (filter_var($email,FILTER_VALIDATE_EMAIL)) {
 
     $result = mail($email, $subject, $text, $headers);
     if (!$result) {
-        echo "Chgnac";
+        $data = array(
+            "success" => false,
+            "message" =>  "Նամակը չի ուղարկվել խնդրում ենք փորձել նորից"
+        );
+
     } else {
-        echo "gnac";
-//        header("Location:../profil.php");
+        $data = array(
+            "success" => true,
+            "message" => "Նամակը հաջողությամբ ուղարկվեց"
+        );
+
     }
+
+
 }else{
-    echo "emailerror";
+    $data = array(
+        "success" => false,
+        "message" => "Գրեք իրական էլ․հասցե"
+    );
+
 }
+echo json_encode($data);
 
 

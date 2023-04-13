@@ -5,7 +5,8 @@ $(document).ready(function () {
             method: "GET",
             success: function(data) {
                 $("#chat_messages").html(data);
-            }
+            },
+
         });
     }
     setInterval(getChatMessages, 500);

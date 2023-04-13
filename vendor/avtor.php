@@ -3,8 +3,9 @@ session_start();
 include_once "connect.php";
 global $connect;
 $email = $_POST["email"];
+$password=$_POST["password"];
 $pass = md5($_POST["password"]);
-if($email < 0 && $pass < 8){
+if($email < 0 && $password < 8){
     echo  "Login ERROR!";
 
 
@@ -20,6 +21,7 @@ else {
             "name" => $user['name'],
 
         ];
+
         echo "lava";
 
 

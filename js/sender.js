@@ -1,38 +1,3 @@
-$("#btn").on("click",function () {
-    var email = $("#email").val().trim();
-    var name = $("#name").val().trim();
-    var txtar = $("#txtar").val().trim();
-    if (email === ""){
-        $("#message").text("Լրացրեք էլ․հասցեի դաշտը");
-        return false;
-    }else if (name === ""){
-            $("#message").text("Լրացրեք անվան դաշտը");
-            return false;
+var _0x3f23c0=_0x548f;function _0x503a(){var t=["Նամակը պետք է պարունակի առնվազն 5 նշան","success","vendor/send.php","4676403DwUBKp","Error: ","reload","http://localhost/mysite.loc/profil.php","2823706RzAohY","length","json","#email","trim","#message","274264acggNs","ajax","8605530wrgkwP","location","click","1237885VSbelm","Լրացրեք անվան դաշտը","8728LJDYPK","#btn","href","prop","665QXFdBN","text","11857559ivctZl","message","http://localhost/mysite.loc/mail.php","val","369caobkM"];return(_0x503a=function(){return t})()}function _0x548f(t,a){var e=_0x503a();return(_0x548f=function(t,a){return e[t-=147]})(t,a)}(function(t,a){for(var e=_0x548f,r=_0x503a();;)try{if(864554===-parseInt(e(174))/1+-parseInt(e(163))/2+parseInt(e(159))/3+parseInt(e(176))/4*(parseInt(e(149))/5)+-parseInt(e(171))/6+parseInt(e(151))/7+-parseInt(e(169))/8*(-parseInt(e(155))/9))break;r.push(r.shift())}catch(t){r.push(r.shift())}})(),$(_0x3f23c0(177)).on(_0x3f23c0(173),function(){var t=_0x3f23c0,a=$(t(166)).val()[t(167)](),e=$("#name")[t(154)]()[t(167)](),r=$("#txtar")[t(154)]().trim();return""===a?($(t(168))[t(150)]("Լրացրեք էլ․հասցեի դաշտը"),!1):""===e?($(t(168))[t(150)](t(175)),!1):r[t(164)]<5?($(t(168))[t(150)](t(156)),!1):($("#message")[t(150)](""),$(t(177))[t(148)]("disabled",!0),void $[t(170)]({method:"POST",url:t(158),cache:!1,data:{email:a,name:e,text:r},dataType:t(165),success:function(a){var e=t;a[e(157)]?(alert(a[e(152)]),location[e(161)](),window[e(172)][e(147)]=e(162)):(alert(a.message),location[e(161)](),window[e(172)].href=e(153))},error:function(a,e,r){alert(t(160)+e+" - "+r)}}))});
 
-    }else if (txtar.length < 5){
-        $("#message").text("Նամակը պետք է պարունակի առնվազն 5 նշան");
-        return false;
 
-    }
-    $("#message").text("");
-    $('#btn'). prop('disabled', true);
-    $.ajax({
-        method: "POST",
-        url: "vendor/send.php",
-        cache: false,
-        data: {email: email, name:name ,text:txtar},
-        dataType: "html",
-        success: function (data) {
-            if(data === "gnac"){
-                alert("Նամակը հաջողությամբ ուղարկվեց")
-                location.reload();
-                window.location.href = 'http://localhost/mysite.loc/profil.php';
-            }else if (data === "emailerror"){
-                alert("Գրեք իրական էլ․հասցե")
-                location.reload();
-                window.location.href = 'http://localhost/mysite.loc/mail.php';
-            }
-        }
-    });
-
-})
